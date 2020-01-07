@@ -54,6 +54,7 @@ echo "y" | cpan -fi  WWW::Mechanize
 echo "y" | cpan -fi  use HTML::TokeParser
 echo "y" | cpan -fi  Term::ANSIColor
 echo "y" | cpan -fi  Mojo::DOM
+echo "y" | cpan install HTML::TableExtract
 echo "y" | cpan -fi  Data::Dumper
 echo "y" | cpan -fi  Win32::Console::ANSI
 echo "y" | cpan -fi  HTML::TableExtract
