@@ -50,6 +50,7 @@ perl Makefile.PL
 make
 make install
 cd ..
+echo "y" | cpan install HTML::TableExtract
 echo "y" | cpan install WWW::Mechanize 
 echo "y" | cpan install use HTML::TokeParser
 echo "y" | cpan install Term::ANSIColor
