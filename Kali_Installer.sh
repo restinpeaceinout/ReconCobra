@@ -51,6 +51,7 @@ echo -e "$red [$green+$red]$off Installing JSON Module ...";
 cpan install JSON
 echo -e "$red [$green+$red]$off Installing Extra Perl Modules ...";
 echo "y" | cpan install WWW::Mechanize
+echo "y" | cpan install HTML::TableExtract
 echo "y" | cpan install use HTML::TokeParser
 echo "y" | cpan install Term::ANSIColor
 echo "y" | cpan install Mojo::DOM
