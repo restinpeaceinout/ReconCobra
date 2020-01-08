@@ -51,7 +51,6 @@ echo -e "$red [$green+$red]$off Installing JSON Module ...";
 cpan install JSON
 echo -e "$red [$green+$red]$off Installing Extra Perl Modules ...";
 echo "y" | cpan install WWW::Mechanize
-echo "y" | cpan install HTML::TableExtract
 echo "y" | cpan install use HTML::TokeParser
 echo "y" | cpan install Term::ANSIColor
 echo "y" | cpan install Mojo::DOM
@@ -164,11 +163,12 @@ chmod u+x setup.sh
 ./setup.sh
 cd ..
 cd ..
+chmod -R 755 *
 chmod u+x *.sh
 cp * -r /usr/share/ReconCobra
 cp *.sh /usr/share/ReconCobra
-chmod -R 777 /usr/share/ReconCobra
-chmod -R 777 ./
+chmod -R 755 /usr/share/ReconCobra
+chmod -R 755 ./
 cat traceroute-function >> ~/.bashrc
 source ~/.bashrc
 
