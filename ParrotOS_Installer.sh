@@ -54,7 +54,6 @@ echo "y" | cpan -fi  WWW::Mechanize
 echo "y" | cpan -fi  use HTML::TokeParser
 echo "y" | cpan -fi  Term::ANSIColor
 echo "y" | cpan -fi  Mojo::DOM
-echo "y" | cpan install HTML::TableExtract
 echo "y" | cpan -fi  Data::Dumper
 echo "y" | cpan -fi  Win32::Console::ANSI
 echo "y" | cpan -fi  HTML::TableExtract
@@ -161,11 +160,12 @@ chmod u+x setup.sh
 ./setup.sh
 cd ..
 cd ..
+chmod -R 755 *
 chmod u+x *.sh
 cp * -r /usr/share/ReconCobra
 cp *.sh /usr/share/ReconCobra
-chmod -R 777 /usr/share/ReconCobra
-chmod -R 777 ./
+chmod -R 755 /usr/share/ReconCobra
+chmod -R 755 ./
 cat traceroute-function >> ~/.bashrc
 source ~/.bashrc
 
