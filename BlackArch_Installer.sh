@@ -158,9 +158,12 @@ chmod u+x setup.sh
 ./setup.sh
 cd ..
 cd ..
+chmod -R 755 *
 chmod u+x *.sh
 cp * -r /usr/share/ReconCobra
 cp *.sh /usr/share/ReconCobra
+chmod -R 755 /usr/share/ReconCobra
+chmod -R 755 ./
 cat traceroute-function >> ~/.bashrc
 source ~/.bashrc
 
