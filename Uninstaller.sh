@@ -48,7 +48,7 @@ function linux() {
 echo -e "$red [$green+$red]$off Uninstalling Perl ...";
 sudo apt purge -y perl
 echo -e "$red [$green+$red]$off Installing Uninstaller ...";
-install App::cpanminus
+cpan -fi install App::cpanminus
 echo -e "$red [$green+$red]$off Uninstalling Extra Perl Modules ...";
 echo "y" | cpanm --uninstall  JSON
 echo "y" | cpanm --uninstall  WWW::Mechanize
@@ -88,21 +88,17 @@ echo "y" | cpanm --uninstall  Bundle::LWP
 
 echo -e "$red [$green+$red]$off Checking directories..."
       sudo rm -r "/usr/share/ReconCobra"
-      sudo rm "/usr/share/icons/ReconCobra.png"
-      sudo rm "/usr/share/applications/ReconCobra.desktop"
-      sudo rm "/usr/local/bin/ReconCobra"
+      sudo rm -r "/usr/share/icons/ReconCobra.png"
+      sudo rm -r "/usr/share/applications/ReconCobra.desktop"
+      sudo rm -r "/usr/local/bin/ReconCobra"
 
 echo -e "$red [$green+$red]$off Uninstalling ...";
 echo -e "$red [$green+$red]$off Creating Symbolic Link ...";
 sudo rm /usr/share/ReconCobra/ReconCobra.pl";
     sudo rm "ReconCobra";
-    sudo rmdir "/usr/share/ReconCobra"
-    sudo rm "installer.sh" "/usr/share/ReconCobra"
-    sudo rm "ReconCobra.pl" "/usr/share/ReconCobra"
-    sudo rm "config/ReconCobra.jpeg" "/usr/share/icons"
-    sudo rm "config/ReconCobra.desktop" "/usr/share/applications"
-    sudo rm "ReconCobra" "/usr/local/bin/"
-    rm "ReconCobra";
+    sudo rm -r "/usr/share/ReconCobra"
+   
+    
 
 rm * -r /usr/share/ReconCobra
 rm *.sh /usr/share/ReconCobra
