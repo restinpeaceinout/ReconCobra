@@ -94,9 +94,8 @@ echo -e "$red [$green+$red]$off Checking directories..."
 
 echo -e "$red [$green+$red]$off Uninstalling ...";
 echo -e "$red [$green+$red]$off Creating Symbolic Link ...";
-echo -e "#!/bin/bash
 sudo rm /usr/share/ReconCobra/ReconCobra.pl";
-    chmod +x "ReconCobra";
+    sudo rm "ReconCobra";
     sudo rmdir "/usr/share/ReconCobra"
     sudo rm "installer.sh" "/usr/share/ReconCobra"
     sudo rm "ReconCobra.pl" "/usr/share/ReconCobra"
@@ -107,6 +106,7 @@ sudo rm /usr/share/ReconCobra/ReconCobra.pl";
 
 rm * -r /usr/share/ReconCobra
 rm *.sh /usr/share/ReconCobra
+}
 
 banner
 echo -e "$red [$green+$red]$off ReconCobra Uninstalled In Your System";
