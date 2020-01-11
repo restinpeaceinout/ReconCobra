@@ -49,7 +49,7 @@ echo -e "$red [$green+$red]$off Installing APT-GET ...";
 pacman -S pacaur
 pacaur -S apt
 echo -e "$red [$green+$red]$off Installing Perl ...";
-apt-get install -y perl
+pacman -S -y perl
 echo -e "$red [$green+$red]$off Installing JSON Module ...";
 cpan install JSON
 echo -e "$red [$green+$red]$off Installing Extra Perl Modules ...";
@@ -96,20 +96,20 @@ perl /usr/share/ReconCobra/ReconCobra.pl" '${1+"$@"}' > "ReconCobra";
     rm "ReconCobra";
 
 echo -e "$red [$green+$red]$off Installing dependencies..."
-echo "y" | apt-get install xdg-utils
-echo "y" | apt-get install cargo
-echo "y" | apt-get install python-yaml
-echo "y" | apt-get install hping3
-echo "y" | apt-get install python2.7
-echo "y" | apt-get install python3
-echo "y" | apt-get install x11-utils xutils-dev imagemagick libxext-dev xspy
-echo "y" | apt-get install golang
-echo "y" | apt-get install curl
-echo "y" | apt-get install nfs-common
-echo "y" | apt-get install smbclient
-echo "y" | apt-get install gem
+echo "y" | pacman -S xdg-utils
+echo "y" | pacman -S cargo
+echo "y" | pacman -S python-yaml
+echo "y" | pacman -S hping3
+echo "y" | pacman -S python2.7
+echo "y" | pacman -S python3
+echo "y" | pacman -S x11-utils xutils-dev imagemagick libxext-dev xspy
+echo "y" | pacman -S golang
+echo "y" | pacman -S curl
+echo "y" | pacman -S nfs-common
+echo "y" | pacman -S smbclient
+echo "y" | pacman -S gem
 gem install wayback_machine_downloader
-echo "y" | apt-get install perl-LWP-Protocol-https
+echo "y" | pacman -S perl-LWP-Protocol-https
 echo "y" | git clone https://github.com/xroche/httrack.git --recurse
 cd httrack
 ./configure --prefix=$HOME/usr && make -j8 && make install
@@ -141,8 +141,8 @@ echo "y" | git clone https://github.com/heycam/json-describe
 cd json-describe
 cargo build
 cd ..
-echo "y" | apt-get install nmap
-echo "y" | apt-get install xrdp
+echo "y" | pacman -S nmap
+echo "y" | pacman -S xrdp
 pip install jsbeautifier
 pip install argparse
 pip install requests
